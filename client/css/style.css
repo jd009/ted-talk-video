@@ -1,0 +1,23 @@
+.tedTalkItem {
+  position: relative;
+  width: 480px;
+}
+
+.tedTalkImage {
+  margin-left: 0px;
+  height: 360px;
+  width: 480px;
+}
+
+.tedTalkImageOverlayText {
+  position: absolute;
+  top: 250px;
+  left: 5px;
+  font-family: helvetica;
+  color: white;
+}
+
+.tedTalkTitleText {
+  font-size: 30px;
+  width: 100%;
+}
