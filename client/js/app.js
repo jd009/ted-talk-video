@@ -1,5 +1,6 @@
 var app = angular.module('tedTalkFeedApp',[
                          'ui.router',
+                         'tedTalkFeedApp.feedService',
                          'tedTalkFeedApp.feed']);
 
 app.config(function($stateProvider, $urlRouterProvider){
