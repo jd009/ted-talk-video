@@ -2,9 +2,13 @@ angular.module('tedTalkFeedApp.feedService', [])
 
 .factory('TedTalkFeedFactory', function($q, $window){
 
+  var tedTalkFeed = null;
+
   function loadTedTalkFeed(deferred) {
-    var feed = new $window.google.feeds.Feed("http://feeds.feedburner.com/tedtalks_video");
-    feed.load(function(result) {
+    if( ! tedTalkFeed) {
+      tedTalkFeed = new $window.google.feeds.Feed("http://feeds.feedburner.com/tedtalks_video");
+    }
+    tedTalkFeed.load(function(result) {
       if(! result.error) {
         deferred.resolve(result.feed.entries);
       } else {
