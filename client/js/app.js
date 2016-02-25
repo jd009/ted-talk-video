@@ -1,5 +1,6 @@
 var app = angular.module('tedTalkFeedApp',[
-                         'ui.router']);
+                         'ui.router',
+                         'tedTalkFeedApp.feed']);
 
 app.config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
@@ -9,7 +10,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: '/',
       views: {
         'content': {
-          templateUrl: '/feed/feed.html',
+          templateUrl: 'js/feed/feed.html',
           controller: 'feedCtrl'
         }
       }
