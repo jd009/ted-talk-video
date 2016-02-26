@@ -1,7 +1,9 @@
-<div class="tedTalkItem">
-  <img class="tedTalkImage" src="http://tedcdnpe-a.akamaihd.net/images/ted/50957b094c2de38b190b98e21c20d07415e36781_480x360.jpg">
-  <div class="tedTalkImageOverlayText">
-    <div>Allan Adams</div>
-    <div class="tedTalkTitleText">What the discovery of gravitational waves means</div>
+<div ng-repeat="tedTalk in tedTalkList">
+  <div class="tedTalkItem">
+    <img class="tedTalkImage" ng-src="{{tedTalk.previewImageURL}}">
+    <div class="tedTalkImageOverlayText">
+      <div>{{tedTalk.speaker}}</div>
+      <div class="tedTalkTitleText">{{tedTalk.title}}</div>
+    </div>
   </div>
 </div>
