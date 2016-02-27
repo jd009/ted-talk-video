@@ -11,7 +11,7 @@ angular.module('tedTalkFeedApp.feedService', [])
 
     this.originalLink = feedEntry.link;
     this.contentSnippet = feedEntry.contentSnippet;
-    this.content = feedEntry.content;
+    this.content = feedEntry.content.split('<')[0];
     this.categories = feedEntry.categories;
     this.publishedDate = feedEntry.publishedDate;
 

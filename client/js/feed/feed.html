@@ -1,9 +1,14 @@
 <div ng-repeat="tedTalk in tedTalkList">
-  <div class="tedTalkItem">
-    <img class="tedTalkImage" ng-src="{{tedTalk.previewImageURL}}">
-    <div class="tedTalkImageOverlayText">
-      <div class="tedTalkSpeakerText">{{tedTalk.speaker}}</div>
-      <div class="tedTalkTitleText">{{tedTalk.title}}</div>
+  <div class="tedTalkContainer">
+    <div class="tedTalkItem" style="float:left;">
+      <img class="tedTalkImage" ng-src="{{tedTalk.previewImageURL}}">
+      <div class="tedTalkImageOverlayText">
+        <div class="tedTalkSpeakerText">{{tedTalk.speaker}}</div>
+        <div class="tedTalkTitleText">{{tedTalk.title}}</div>
+      </div>
     </div>
+    <blockquote class="rectangle-speech-border" style="float:left;">
+      <p>{{tedTalk.contentSnippet}}</p>
+    </blockquote>
   </div>
 </div>
