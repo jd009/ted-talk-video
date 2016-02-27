@@ -18,6 +18,16 @@
   border-radius: 16px;
 }
 
+.play-icon {
+  position: absolute;
+  top: 120px;
+  left: 190px;
+  display: inline-block;
+  width: 100px;
+  height: 120px;
+  fill: white;
+}
+
 .tedTalkImageOverlayText {
   position: absolute;
   top: 245px;
