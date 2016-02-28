@@ -18,13 +18,23 @@
   border-radius: 16px;
 }
 
-.play-icon {
+.icon-play {
   position: absolute;
   top: 120px;
   left: 190px;
   display: inline-block;
   width: 100px;
   height: 120px;
+  fill: white;
+}
+
+.icon-info {
+  position: absolute;
+  top: 10px;
+  left: 420px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
   fill: white;
 }
 
