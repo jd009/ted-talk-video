@@ -19,6 +19,8 @@ angular.module('tedTalkFeedApp.feedService', [])
     this.previewImageURL = primaryMedia.thumbnails[0].url;
     this.mediaURL = primaryMedia.url;
     this.mediaType = primaryMedia.type;
+
+    this.showControlIcons = false;
   }
 
   function loadTedTalkFeed(deferred) {

@@ -8,4 +8,12 @@ angular.module('tedTalkFeedApp.feed', ['tedTalkFeedApp.feedService'])
     $scope.tedTalkList = tedTalkList;
   });
 
+  $scope.showIcons = function() {
+    this.tedTalk.showControlIcons = true;
+  };
+
+  $scope.hideIcons = function() {
+    this.tedTalk.showControlIcons = false;
+  };
+
 });

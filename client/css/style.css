@@ -12,10 +12,22 @@
   overflow: hidden;
 }
 
+.tedTalkItem:hover {
+  cursor: pointer;
+}
+
 .tedTalkImage {
   height: 100%;
   width: 100%;
   border-radius: 16px;
+}
+
+.tedTalkItem:hover > .tedTalkImage {
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+  filter: brightness(50%);
 }
 
 .icon-play {
