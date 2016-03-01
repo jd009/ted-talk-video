@@ -57,6 +57,14 @@
   height: 50px;
 }
 
+.icon-cross {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
 .tedTalkImageOverlayText {
   position: absolute;
   top: 245px;

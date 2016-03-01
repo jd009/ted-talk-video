@@ -20,4 +20,7 @@ angular.module('tedTalkFeedApp.feed', ['tedTalkFeedApp.feedService'])
     this.tedTalk.isMoreInfoVisible = true;
   };
 
+  $scope.hideMoreInfo = function() {
+    this.tedTalk.isMoreInfoVisible = false;
+  };
 });
