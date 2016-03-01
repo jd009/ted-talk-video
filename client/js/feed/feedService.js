@@ -13,7 +13,8 @@ angular.module('tedTalkFeedApp.feedService', [])
     this.contentSnippet = feedEntry.contentSnippet;
     this.content = feedEntry.content.split('<')[0];
     this.categories = feedEntry.categories;
-    this.publishedDate = feedEntry.publishedDate;
+    // Only use the 3-char-day, digit-day-number month 4-digit-year and drop the time
+    this.publishedDate = feedEntry.publishedDate.match(/^\w{3},\s\d+\s\w+\s\d{4}/)[0];
 
     var primaryMedia = feedEntry.mediaGroups[0].contents[0];
     this.previewImageURL = primaryMedia.thumbnails[0].url;

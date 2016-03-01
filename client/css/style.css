@@ -92,6 +92,13 @@
   color: white;
 }
 
+.ted-talk-info-date {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: gray;
+}
+
 .rectangle-speech-border {
   position:relative;
   padding:10px 10px;
