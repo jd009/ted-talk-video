@@ -3,6 +3,7 @@ angular.module('tedTalkFeedApp.feed', ['tedTalkFeedApp.feedService'])
 .controller('feedCtrl', function($scope, TedTalkFeedFactory, $sce){
   $scope.tedTalkList = null;
   $scope.tedTalkToPlayTitle = null;
+  $scope.tedTalkToPlaySpeaker = null;
   $scope.tedTalkToPlayUrl = null;
 
   TedTalkFeedFactory.getTedTalkList().then(function(tedTalkList) {
@@ -20,6 +21,7 @@ angular.module('tedTalkFeedApp.feed', ['tedTalkFeedApp.feedService'])
     }, false);
 
     $scope.tedTalkToPlayTitle = this.tedTalk.title;
+    $scope.tedTalkToPlaySpeaker = this.tedTalk.speaker;
     $scope.tedTalkToPlayUrl = $sce.trustAsResourceUrl(this.tedTalk.mediaURL);
   };
 
@@ -27,6 +29,7 @@ angular.module('tedTalkFeedApp.feed', ['tedTalkFeedApp.feedService'])
     var videoPlayerDomObject = $('#videoPlayer')[0];
     videoPlayerDomObject.pause();
     $scope.tedTalkToPlayUrl = null;
+    $scope.tedTalkToPlaySpeaker = null;
     $scope.tedTalkToPlayTitle = null;
     videoPlayerDomObject.src = '';
   };

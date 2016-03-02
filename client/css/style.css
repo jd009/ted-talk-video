@@ -67,7 +67,7 @@
 
 .tedTalkImageOverlayText {
   position: absolute;
-  top: 245px;
+  top: 255px;
   margin: 0px;
   padding: 10px;
   border-bottom-left-radius: 16px;
@@ -83,6 +83,7 @@
 
 .tedTalkTitleText {
   font-size: 30px;
+  line-height: 30px;
   width: 100%;
 }
 
@@ -166,9 +167,18 @@
   background:black;
 }
 
+.video-modal-header {
+  padding: 15px;
+  border-bottom: 5px solid #E62B1E;;
+}
+
 .modal-body-center {
   text-align: center;
   background-color: black;
+}
+
+.modal-footer-text {
+  float: left;
 }
 
 .loading-spinner-custom {
