@@ -103,7 +103,7 @@
   position:relative;
   padding:10px 10px;
   margin: 3px;
-  width: 300px;
+  width: 475px;
   border:5px solid #E62B1E;
   text-align:left;
   color:#333;
@@ -121,7 +121,7 @@
   bottom:-40px;
   left:50px;
   width:50px;
-  height:35px;
+  height:40px;
   border-style:solid;
   border-width:0 5px 5px 0;
   border-color:#E62B1E;
@@ -164,4 +164,20 @@
   width:24px;
   height:15px;
   background:black;
+}
+
+.modal-body-center {
+  text-align: center;
+  background-color: black;
+}
+
+.loading-spinner-custom {
+  font-size: 48px;
+  color: #E62B1E;
+}
+
+#loading-message {
+  font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  color: white;
 }

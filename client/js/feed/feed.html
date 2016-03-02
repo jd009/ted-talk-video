@@ -2,7 +2,7 @@
   <div class="tedTalkContainer">
     <div class="tedTalkItem" style="float:left;" ng-mouseenter="showControlIcons()" ng-mouseleave="hideControlIcons()">
       <img class="tedTalkImage" ng-src="{{tedTalk.previewImageURL}}">
-      <svg class="icon icon-play" viewBox="0 0 1024 1024" ng-show="tedTalk.areControlIconsVisible">
+      <svg class="icon icon-play" viewBox="0 0 1024 1024" ng-show="tedTalk.areControlIconsVisible" ng-click="playTedTalk()">
         <path class="path1" d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM512 928c-229.75 0-416-186.25-416-416s186.25-416 416-416 416 186.25 416 416-186.25 416-416 416zM384 288l384 224-384 224z"></path>
       </svg>
       <svg class="icon icon-info" viewBox="0 0 1024 1024" ng-show="tedTalk.areControlIconsVisible" ng-click="showMoreInfo()">
@@ -24,3 +24,25 @@
     </blockquote>
   </div>
 </div>
+
+<div id="videoModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="closePlayingTedTalk()" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{tedTalkToPlayTitle}}</h4>
+      </div>
+      <div class="modal-body-center modal-body">
+        <div id="loading-spinner">
+          <i class="fa fa-spinner fa-spin loading-spinner-custom"></i>
+          <div id="loading-message">Loading</div>
+        </div>
+        <video id="videoPlayer" autoplay controls ng-src="{{tedTalkToPlayUrl}}"></video>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" ng-click="closePlayingTedTalk()" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
