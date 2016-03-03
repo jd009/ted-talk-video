@@ -1,0 +1,22 @@
+{
+  "name": "ted-talk-videos",
+  "version": "1.0.0",
+  "description": "Front end for ted talk RSS feed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jd009/ted-talk-video.git"
+  },
+  "author": "John DeBlanc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jd009/ted-talk-video/issues"
+  },
+  "homepage": "https://github.com/jd009/ted-talk-video#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
