@@ -6,10 +6,15 @@ angular.module('tedTalkFeedApp.feed', ['tedTalkFeedApp.feedService'])
   $scope.tedTalkToPlaySpeaker = null;
   $scope.tedTalkToPlayUrl = null;
 
-  TedTalkFeedFactory.getTedTalkList().then(function(tedTalkList) {
-    console.log(tedTalkList);
-    $scope.tedTalkList = tedTalkList;
-  });
+  loadFeed();
+
+  function loadFeed() {
+    $('#initial-loading-spinner').show();
+    TedTalkFeedFactory.getTedTalkList().then(function(tedTalkList) {
+      $scope.tedTalkList = tedTalkList;
+      $('#initial-loading-spinner').hide();
+    });
+  }
 
   $scope.playTedTalk = function() {
     $('#videoModal').modal('show');
